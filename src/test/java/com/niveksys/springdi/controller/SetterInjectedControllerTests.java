@@ -1,6 +1,6 @@
 package com.niveksys.springdi.controller;
 
-import com.niveksys.springdi.service.GreetingServiceImpl;
+import com.niveksys.springdi.service.PrimaryGreetingService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ public class SetterInjectedControllerTests {
     @BeforeEach
     void setUp() {
         this.controller = new SetterInjectedController();
-        this.controller.setGreetingService(new GreetingServiceImpl());
+        this.controller.setGreetingService(new PrimaryGreetingService());
     }
 
     @Test
