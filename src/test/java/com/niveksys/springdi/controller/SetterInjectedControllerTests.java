@@ -1,6 +1,5 @@
 package com.niveksys.springdi.controller;
 
-import com.niveksys.springdi.service.GreetingService;
 import com.niveksys.springdi.service.GreetingServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;

@@ -4,7 +4,6 @@ import com.niveksys.springdi.service.GreetingServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.TestComponent;
 
 public class SpringDiApplicationTests {
 
