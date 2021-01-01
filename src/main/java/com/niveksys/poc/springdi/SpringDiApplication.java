@@ -3,6 +3,7 @@ package com.niveksys.poc.springdi;
 import com.niveksys.poc.springdi.controller.ConstructorInjectedController;
 import com.niveksys.poc.springdi.controller.I18nController;
 import com.niveksys.poc.springdi.controller.MyController;
+import com.niveksys.poc.springdi.controller.PetController;
 import com.niveksys.poc.springdi.controller.PropertyInjectedController;
 import com.niveksys.poc.springdi.controller.SetterInjectedController;
 
@@ -15,6 +16,10 @@ public class SpringDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SpringDiApplication.class, args);
+
+		PetController petController = (PetController) ctx.getBean("petController");
+		System.out.println("------ Pet of the Year ------");
+		System.out.println(petController.whichPetIsTheBest());
 
 		System.out.println("------ Profile");
 		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
