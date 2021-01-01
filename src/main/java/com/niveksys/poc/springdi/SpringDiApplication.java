@@ -1,9 +1,10 @@
-package com.niveksys.springdi;
+package com.niveksys.poc.springdi;
 
-import com.niveksys.springdi.controller.ConstructorInjectedController;
-import com.niveksys.springdi.controller.MyController;
-import com.niveksys.springdi.controller.PropertyInjectedController;
-import com.niveksys.springdi.controller.SetterInjectedController;
+import com.niveksys.poc.springdi.controller.ConstructorInjectedController;
+import com.niveksys.poc.springdi.controller.I18nController;
+import com.niveksys.poc.springdi.controller.MyController;
+import com.niveksys.poc.springdi.controller.PropertyInjectedController;
+import com.niveksys.poc.springdi.controller.SetterInjectedController;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,10 @@ public class SpringDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SpringDiApplication.class, args);
+
+		System.out.println("------ Profile");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		System.out.println("------ Primary Bean");
 		MyController myController = (MyController) ctx.getBean("myController");

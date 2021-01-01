@@ -1,6 +1,6 @@
-package com.niveksys.springdi.controller;
+package com.niveksys.poc.springdi.controller;
 
-import com.niveksys.springdi.service.PrimaryGreetingService;
+import com.niveksys.poc.springdi.service.PrimaryGreetingService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

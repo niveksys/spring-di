@@ -1,6 +1,6 @@
-package com.niveksys.springdi.controller;
+package com.niveksys.poc.springdi.controller;
 
-import com.niveksys.springdi.service.GreetingService;
+import com.niveksys.poc.springdi.service.GreetingService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,4 +1,4 @@
-package com.niveksys.springdi;
+package com.niveksys.poc.springdi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
