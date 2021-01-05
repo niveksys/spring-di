@@ -10,8 +10,10 @@ import com.niveksys.poc.springdi.controller.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = { "com.niveksys.poc" })
 public class SpringDiApplication {
 
 	public static void main(String[] args) {
