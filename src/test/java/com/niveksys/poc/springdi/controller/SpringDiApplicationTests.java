@@ -1,5 +1,6 @@
 package com.niveksys.poc.springdi.controller;
 
+import com.niveksys.poc.springdi.service.GreetingRepositoryImpl;
 import com.niveksys.poc.springdi.service.PrimaryGreetingService;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +13,7 @@ public class SpringDiApplicationTests {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectedController();
-        controller.greetingService = new PrimaryGreetingService();
+        controller.greetingService = new PrimaryGreetingService(new GreetingRepositoryImpl());
     }
 
     @Test
