@@ -1,0 +1,5 @@
+niveksys:
+  jms:
+    username: JMS_username
+    password: JMS_Pazzw0rd
+    url: uri:jms
