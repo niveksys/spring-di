@@ -1,20 +1,20 @@
 package com.niveksys.poc.springdi.bean;
 
 public class FakeDataSource {
-    private String user;
+    private String username;
     private String password;
     private String url;
 
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
     public String getPassword() {
         return password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setPassword(String password) {

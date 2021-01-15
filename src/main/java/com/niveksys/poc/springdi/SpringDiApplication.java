@@ -53,7 +53,8 @@ public class SpringDiApplication {
 		System.out.println();
 		System.out.println("------ Test Property Source");
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
-		System.out.println(fakeDataSource.getUser());
+		System.out.println(fakeDataSource.getUsername());
+		System.out.println(fakeDataSource.getPassword());
 
 		System.out.println();
 	}
