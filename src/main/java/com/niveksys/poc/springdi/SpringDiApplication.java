@@ -1,5 +1,6 @@
 package com.niveksys.poc.springdi;
 
+import com.niveksys.poc.springdi.bean.FakeDataSource;
 import com.niveksys.poc.springdi.controller.ConstructorInjectedController;
 import com.niveksys.poc.springdi.controller.I18nController;
 import com.niveksys.poc.springdi.controller.MyController;
@@ -19,32 +20,42 @@ public class SpringDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SpringDiApplication.class, args);
 
-		PetController petController = (PetController) ctx.getBean("petController");
-		System.out.println("------ Pet of the Year ------");
-		System.out.println(petController.whichPetIsTheBest());
-
-		System.out.println("------ Profile");
-		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
-		System.out.println(i18nController.sayHello());
-
-		System.out.println("------ Primary Bean");
-		MyController myController = (MyController) ctx.getBean("myController");
-		System.out.println(myController.sayHello());
-
-		System.out.println("------ Property");
+		System.out.println();
+		System.out.println("------ Test DI by Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx
 				.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());
 
-		System.out.println("------ Setter");
+		System.out.println("------ Test DI by Setter");
 		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx
 				.getBean("setterInjectedController");
 		System.out.println(setterInjectedController.getGreeting());
 
-		System.out.println("------ Controller");
+		System.out.println("------ Test DI by Controller");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx
 				.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println();
+		System.out.println("------ Test Primary Bean");
+		MyController myController = (MyController) ctx.getBean("myController");
+		System.out.println(myController.sayHello());
+
+		System.out.println();
+		System.out.println("------ Test Profile Annotation");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
+
+		PetController petController = (PetController) ctx.getBean("petController");
+		System.out.println("------ Test Multiple Profile Annotation ------");
+		System.out.println(petController.whichPetIsTheBest());
+
+		System.out.println();
+		System.out.println("------ Test Property Source");
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUser());
+
+		System.out.println();
 	}
 
 }
