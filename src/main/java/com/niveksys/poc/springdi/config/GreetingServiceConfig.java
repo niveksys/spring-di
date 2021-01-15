@@ -19,14 +19,14 @@ public class GreetingServiceConfig {
 
     @Bean
     @Primary
-    @Profile({ "default", "EN" })
+    @Profile({ "default", "en" })
     GreetingService primaryGreetingService(GreetingServiceFactory greetingServiceFactory) {
         return greetingServiceFactory.createGreetingService("en");
     }
 
     @Bean
     @Primary
-    @Profile("DE")
+    @Profile("de")
     GreetingService primaryGermanGreetingService(GreetingServiceFactory greetingServiceFactory) {
         System.out.println("Factory - de");
         return greetingServiceFactory.createGreetingService("de");
