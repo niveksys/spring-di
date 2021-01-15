@@ -1,6 +1,7 @@
 package com.niveksys.poc.springdi;
 
 import com.niveksys.poc.springdi.bean.FakeDataSource;
+import com.niveksys.poc.springdi.bean.FakeJmsBroker;
 import com.niveksys.poc.springdi.controller.ConstructorInjectedController;
 import com.niveksys.poc.springdi.controller.I18nController;
 import com.niveksys.poc.springdi.controller.MyController;
@@ -55,6 +56,11 @@ public class SpringDiApplication {
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource.getUsername());
 		System.out.println(fakeDataSource.getPassword());
+
+		System.out.println("------ Test Multiple Property Source");
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+		System.out.println(fakeJmsBroker.getUsername());
+		System.out.println(fakeJmsBroker.getPassword());
 
 		System.out.println();
 	}
